@@ -7,7 +7,6 @@ public class PredictorTest {
 
     @Test
     public void testPredictorTorch() throws OrtException {
-
         OnnxPredictor predictor = new OnnxPredictor("python/torch.onnx");
         float[] inp = {(float) 0.4983, (float) 0.4915};
         float[] floats = predictor.predictProba(inp);
@@ -17,7 +16,6 @@ public class PredictorTest {
 
     @Test
     public void testPredictorRF() throws OrtException {
-
         OnnxPredictor predictor = new OnnxPredictor("python/rf.onnx");
         float[] inp = {(float) 5.1, (float) 3.4, (float) 1.5, (float) 0.2};
         float[] floats = predictor.predictSklearn(inp);
@@ -27,7 +25,6 @@ public class PredictorTest {
 
     @Test
     public void testPredictorCB() throws CatBoostError {
-
         CatboostPredictor predictor = new CatboostPredictor("python/cb.cbm");
         float[] inp = {(float) 5.1, (float) 3.4, (float) 1.5, (float) 0.2};
         double[] floats = predictor.predictProba(inp);

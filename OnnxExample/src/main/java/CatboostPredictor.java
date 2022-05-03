@@ -1,9 +1,7 @@
-
 import ai.catboost.CatBoostError;
 import ai.catboost.CatBoostModel;
 import ai.catboost.CatBoostPredictions;
 
-import java.io.File;
 import java.util.Arrays;
 
 public class CatboostPredictor {
@@ -11,7 +9,6 @@ public class CatboostPredictor {
 
     public CatboostPredictor(String path) throws CatBoostError {
         this.model = CatBoostModel.loadModel(path);
-
     }
 
     public double[] predictProba(float[] inp) throws CatBoostError {

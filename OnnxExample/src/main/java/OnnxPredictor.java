@@ -4,7 +4,6 @@ import ai.onnxruntime.OrtException;
 import ai.onnxruntime.OrtSession;
 
 import java.util.Collections;
-import java.util.List;
 
 public class OnnxPredictor {
     private OrtSession session;
@@ -12,7 +11,6 @@ public class OnnxPredictor {
     static OrtEnvironment env = OrtEnvironment.getEnvironment();
 
     public OnnxPredictor(String path) throws OrtException {
-
         session = env.createSession(path);
     }
 
