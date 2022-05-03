@@ -3,6 +3,7 @@ import ai.catboost.CatBoostError;
 import ai.catboost.CatBoostModel;
 import ai.catboost.CatBoostPredictions;
 
+import java.io.File;
 import java.util.Arrays;
 
 public class CatboostPredictor {
