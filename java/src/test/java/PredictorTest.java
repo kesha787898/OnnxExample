@@ -11,7 +11,7 @@ public class PredictorTest {
         OnnxPredictor predictor = new OnnxPredictor("//home/kesha787898/IdeaProjects/OnnxExample/java/python/torch.onnx");
         float[] inp = {(float) 0.4983, (float) 0.4915};
         float[] floats = predictor.predictProba(inp);
-        float[] real = {(float) 0.4111};
+        float[] real = {(float) 0.3709301};
         Assert.assertArrayEquals(floats, real, (float) 1e-4);
     }
 
@@ -21,7 +21,7 @@ public class PredictorTest {
         OnnxPredictor predictor = new OnnxPredictor("//home/kesha787898/IdeaProjects/OnnxExample/java/python/rf.onnx");
         float[] inp = {(float) 5.1, (float) 3.4, (float) 1.5, (float) 0.2};
         float[] floats = predictor.predictSklearn(inp);
-        float[] real = {(float) 9.70724332e-01, (float) 2.92755070e-02, (float) 1.61450810e-07};
+        float[] real = {(float) 0.96740323, (float) 0.03259658, (float) 1.61450810e-07};
         Assert.assertArrayEquals(floats, real, (float) 1e-4);
     }
 
